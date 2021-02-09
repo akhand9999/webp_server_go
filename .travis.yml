@@ -19,6 +19,12 @@ jobs:
     - stage: "Unit Tests"
       arch:
         - amd64
+      os:
+        - linux
+      script:
+        - make test
+    - stage: "Unit Tests"
+      arch:
         - arm64-graviton2
       virt: lxd
       group: edge
